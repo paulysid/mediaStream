@@ -52,16 +52,34 @@ LANGUAGE_MARKERS = (
 )
 
 NSFW_MARKERS = ("nsfw", "xxx", "adult", "porn", "sex")
+ENGLISH_SOURCE_COUNTRIES = {"au", "ca", "gb", "ie", "nz", "uk", "us"}
+INTERNATIONAL_ENGLISH_MARKERS = (
+    "bbc",
+    "bloomberg",
+    "cnn",
+    "dw english",
+    "euronews english",
+    "france 24 english",
+    "nhk world",
+    "sky news",
+    "world news",
+)
 
 
-def keep_entry(entry: list[str]) -> bool:
+def keep_entry(entry: list[str], source_name: str) -> bool:
     text = " ".join(entry).lower()
     has_language_marker = any(marker in text for marker in LANGUAGE_MARKERS)
     is_nsfw = any(
         re.search(rf"(?<![a-z0-9]){re.escape(marker)}(?![a-z0-9])", text)
         for marker in NSFW_MARKERS
     )
-    return not has_language_marker or is_nsfw
+    source_country = source_name.split("_", 1)[0]
+    is_english_source = source_country in ENGLISH_SOURCE_COUNTRIES
+    is_international_english = any(marker in text for marker in INTERNATIONAL_ENGLISH_MARKERS)
+    return is_nsfw or (
+        not has_language_marker
+        and (is_english_source or is_international_english)
+    )
 
 
 def build_playlist() -> None:
@@ -79,7 +97,7 @@ def build_playlist() -> None:
                 end += 1
 
             entry = lines[index:end]
-            if keep_entry(entry):
+            if keep_entry(entry, source.stem):
                 playlist.extend(entry)
             index = end
 
