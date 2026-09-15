@@ -57,11 +57,11 @@ jobs:
           git status
           git commit --allow-empty -m "[Bot] Update PLAYLISTS.md" -m "Committed by [iptv-bot](https://github.com/apps/iptv-bot) via [update](https://github.com/iptv-org/iptv/actions/runs/${{ github.run_id }}) workflow." --no-verify
       - name: Push all changes to the repository
-        if: ${{ !env.ACT && github.ref == 'refs/heads/master' }}
+        if: ${{ !env.ACT && github.ref == 'refs/heads/main' }}
         run: git push
       - name: Deploy public playlists to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.1
-        if: ${{ !env.ACT && github.ref == 'refs/heads/master' }}
+        if: ${{ !env.ACT && github.ref == 'refs/heads/main' }}
         with:
           repository-name: iptv-org/iptv
           branch: gh-pages
@@ -73,7 +73,7 @@ jobs:
           clean: true
       - name: Move .api/streams.json to iptv-org/api
         uses: JamesIves/github-pages-deploy-action@4.1.1
-        if: ${{ !env.ACT && github.ref == 'refs/heads/master' }}
+        if: ${{ !env.ACT && github.ref == 'refs/heads/main' }}
         with:
           repository-name: iptv-org/api
           branch: gh-pages
