@@ -7,8 +7,6 @@ Collection of publicly available IPTV (Internet Protocol television) channels fr
 - 🚀 [How to use?](#how-to-use)
 - 📺 [Playlists](#playlists)
 - 🗓 [EPG](#epg)
-- 🗄 [Database](#database)
-- 👨‍💻 [API](#api)
 - 📚 [Resources](#resources)
 - 💬 [Discussions](#discussions)
 - ❓ [FAQ](#faq)
@@ -20,7 +18,7 @@ Collection of publicly available IPTV (Internet Protocol television) channels fr
 
 Simply paste the link to one of the playlists into [any video player](https://github.com/iptv-org/awesome-iptv#apps) that supports live streaming and press _Open_.
 
-![VLC Network Panel](https://github.com/iptv-org/iptv/raw/master/.readme/preview.png)
+![VLC Network Panel](.readme/preview.png)
 
 ## Playlists
 
@@ -36,13 +34,9 @@ Links to other playlists can be found in the [PLAYLISTS.md](PLAYLISTS.md) file.
 
 [Electronic Program Guide](https://en.wikipedia.org/wiki/Electronic_program_guide) for most of the channels can be downloaded using utilities published in the [iptv-org/epg](https://github.com/iptv-org/epg) repository.
 
-## Database
+## Stream data
 
-All channel data is taken from the [iptv-org/database](https://github.com/paulysid/database) repository. If you find any errors please open a new [issue](https://github.com/paulysid/database/issues) there.
-
-## API
-
-The API documentation can be found in the [iptv-org/api](https://github.com/paulysid/api) repository.
+The stream URLs and playlist metadata are maintained directly in the `streams/` directory.
 
 ## Resources
 

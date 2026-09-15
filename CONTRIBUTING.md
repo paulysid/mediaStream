@@ -6,7 +6,7 @@
 
 ## Introduction
 
-**iptv-org** is more than just a repository for sharing links to live streams. After years of commitment and moderation practices, it has evolved into a knowledge base for [channels](https://github.com/paulysid/database), [streams](https://github.com/iptv-org/iptv), and [program guides](https://github.com/iptv-org/epg). To keep all this data organized, we must follow strict structural requirements and set certain standards for participants.
+This repository contains publicly available links to live streams. Please keep changes focused on the playlist files and follow the formatting requirements below.
 
 ## How to?
 
@@ -34,12 +34,11 @@ If the broadcast only works in certain countries or is periodically interrupted,
 
 ### How to fix the stream description?
 
-Most of the stream description (channel name, feed name, categories, languages, broadcast area, logo) is loaded from [iptv-org/database](https://github.com/paulysid/database) using the stream ID.
+Stream descriptions are stored in the playlist entries under `streams/`.
 
 So there are usually only two reasons for an incorrect description:
 
 - **The stream has an incorrect ID:** In that case, all you need is to update the stream ID in the playlist using this [form](https://github.com/iptv-org/iptv/issues/new?assignees=&labels=streams%3Aedit&projects=&template=2_streams_edit.yml&title=Edit%3A+). A full list of all supported channels and their corresponding IDs can be found on [iptv-org.github.io](https://iptv-org.github.io/).
-- **Our database contains incorrect channel information:** You can verify this on [iptv-org.github.io](https://iptv-org.github.io/). If this is the case, please refer to: [How to edit a database entry?](https://github.com/paulysid/database/blob/master/CONTRIBUTING.md#how-to-edit-a-database-entry).
 
 Once the changes are approved, the stream description will automatically update across all repositories.
 
@@ -58,7 +57,7 @@ The only thing before publishing your report is to make sure that:
 
 To request the removal of a channel link from the repository, please fill out this [form](https://github.com/iptv-org/iptv/issues/new?assignees=&labels=removal+request&projects=&template=6_copyright-claim.yml&title=Remove%3A+) and wait for the request to be reviewed (this usually takes less than 1 business day). If approved, links to the channel will be immediately removed from the repository.
 
-The channel will also be added to our [blocklist](https://github.com/paulysid/database/blob/master/data/blocklist.csv) to prevent it from reappearing in our playlists in the future.
+Update or remove the affected playlist entry directly when a stream should no longer be included.
 
 **IMPORTANT:** We only accept removal requests from channel owners and their official representatives. All other requests will be closed immediately.
 

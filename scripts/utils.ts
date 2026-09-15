@@ -1,12 +1,10 @@
-import { restEndpointMethods } from '@octokit/plugin-rest-endpoint-methods'
 import axios, { AxiosProxyConfig, AxiosRequestConfig } from 'axios'
 import { paginateGraphQL } from '@octokit/plugin-paginate-graphql'
 import { parse as parsePlaylist, setOptions } from 'hls-parser'
-import { paginateRest } from '@octokit/plugin-paginate-rest'
 import { Collection, Dictionary } from '@freearhey/core'
 import { SocksProxyAgent } from 'socks-proxy-agent'
 import { parse as parseManifest } from 'mpd-parser'
-import { TESTING, OWNER, REPO } from './constants'
+import { TESTING } from './constants'
 import { ProxyParser, DataSet } from './core'
 import { Discussion, Issue } from './models'
 import normalizeUrl from 'normalize-url'
@@ -195,37 +193,6 @@ export async function getStreamInfo(
   }
 
   return info
-}
-
-export async function loadIssues(props?: { labels: string | string[] }) {
-  const CustomOctokit = Octokit.plugin(paginateRest, restEndpointMethods)
-  const octokit = new CustomOctokit()
-
-  let labels = ''
-  if (props && props.labels) {
-    labels = Array.isArray(props.labels) ? props.labels.join(',') : props.labels
-  }
-  let issues: object[] = []
-  if (TESTING) {
-    issues = (await import('../tests/__data__/input/issues.js')).default
-  } else {
-    issues = await octokit.paginate(octokit.rest.issues.listForRepo, {
-      owner: OWNER,
-      repo: REPO,
-      per_page: 100,
-      labels,
-      status: 'open',
-      direction: 'asc',
-      headers: {
-        'X-GitHub-Api-Version': '2022-11-28'
-      }
-    })
-  }
-
-  return new Collection(issues).map(({ number, body, labels }) => {
-    const dataSet = parseIssueBody(body)
-    return new Issue({ number, labels: labels.map(l => l.name), dataSet })
-  })
 }
 
 export function parseIssueBody(body: string): DataSet {
