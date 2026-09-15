@@ -1,4 +1,5 @@
 from pathlib import Path
+import re
 
 
 LANGUAGE_MARKERS = (
@@ -56,7 +57,10 @@ NSFW_MARKERS = ("nsfw", "xxx", "adult", "porn", "sex")
 def keep_entry(entry: list[str]) -> bool:
     text = " ".join(entry).lower()
     has_language_marker = any(marker in text for marker in LANGUAGE_MARKERS)
-    is_nsfw = any(marker in text for marker in NSFW_MARKERS)
+    is_nsfw = any(
+        re.search(rf"(?<![a-z0-9]){re.escape(marker)}(?![a-z0-9])", text)
+        for marker in NSFW_MARKERS
+    )
     return not has_language_marker or is_nsfw
 
 
