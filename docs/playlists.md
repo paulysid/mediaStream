@@ -13,4 +13,5 @@ each `#EXTINF` entry. Keep the existing metadata when editing an entry.
 
 The `Build playlist` workflow combines these files into the root `index.m3u`, prioritizing
 English-primary source groups and clearly identified international English channels. Non-English
-source groups are excluded. Explicitly marked NSFW entries are retained as an exception.
+source groups and religious entries are excluded. Explicitly marked NSFW entries are retained as
+an exception unless they are also marked with a religious term.

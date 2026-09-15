@@ -21,8 +21,8 @@ marked NSFW entries remain an exception.
 Stream files are grouped under `streams/`, generally by country or provider. Edit the relevant
 `.m3u` file, then commit and push the change. The build workflow combines all stream files into
 the root playlist. The build excludes non-English source groups and entries with clear non-English language markers
-while retaining explicitly marked NSFW entries. Source files remain available for reference and
-future selection.
+or religious markers while retaining explicitly marked NSFW entries unless they are also marked
+as religious. Source files remain available for reference and future selection.
 
 Each entry should include an `#EXTINF` line followed by a playable stream URL. Keep metadata such
 as `tvg-id`, `tvg-name`, `tvg-logo`, and `group-title` when it is available.

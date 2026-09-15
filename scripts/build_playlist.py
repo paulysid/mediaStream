@@ -52,6 +52,30 @@ LANGUAGE_MARKERS = (
 )
 
 NSFW_MARKERS = ("nsfw", "xxx", "adult", "porn", "sex")
+RELIGIOUS_MARKERS = (
+    "allah",
+    "bible",
+    "buddh",
+    "church",
+    "christian",
+    "christ",
+    "evangel",
+    "gospel",
+    "hindu",
+    "islam",
+    "jesus",
+    "jewish",
+    "judaism",
+    "koran",
+    "mosque",
+    "muslim",
+    "prayer",
+    "quran",
+    "religious",
+    "temple",
+    "torah",
+    "worship",
+)
 ENGLISH_SOURCE_COUNTRIES = {"au", "ca", "gb", "ie", "nz", "uk", "us"}
 INTERNATIONAL_ENGLISH_MARKERS = (
     "bbc",
@@ -69,6 +93,10 @@ INTERNATIONAL_ENGLISH_MARKERS = (
 def keep_entry(entry: list[str], source_name: str) -> bool:
     text = " ".join(entry).lower()
     has_language_marker = any(marker in text for marker in LANGUAGE_MARKERS)
+    has_religious_marker = any(
+        re.search(rf"(?<![a-z0-9]){re.escape(marker)}(?![a-z0-9])", text)
+        for marker in RELIGIOUS_MARKERS
+    )
     is_nsfw = any(
         re.search(rf"(?<![a-z0-9]){re.escape(marker)}(?![a-z0-9])", text)
         for marker in NSFW_MARKERS
@@ -76,10 +104,10 @@ def keep_entry(entry: list[str], source_name: str) -> bool:
     source_country = source_name.split("_", 1)[0]
     is_english_source = source_country in ENGLISH_SOURCE_COUNTRIES
     is_international_english = any(marker in text for marker in INTERNATIONAL_ENGLISH_MARKERS)
-    return is_nsfw or (
+    return not has_religious_marker and (is_nsfw or (
         not has_language_marker
         and (is_english_source or is_international_english)
-    )
+    ))
 
 
 def build_playlist() -> None:
