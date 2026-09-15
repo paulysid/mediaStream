@@ -1,4 +1,4 @@
-# IPTV [![update](https://github.com/iptv-org/iptv/actions/workflows/update.yml/badge.svg)](https://github.com/iptv-org/iptv/actions/workflows/update.yml)
+# IPTV [![update](https://github.com/paulysid/mediaStream/actions/workflows/update.yml/badge.svg)](https://github.com/paulysid/mediaStream/actions/workflows/update.yml)
 
 Collection of publicly available IPTV (Internet Protocol television) channels from all over the world.
 
@@ -27,7 +27,7 @@ Simply paste the link to one of the playlists into [any video player](https://gi
 The main playlist containing all channels available in the repository can be found at:
 
 ```
-https://iptv-org.github.io/iptv/index.m3u
+https://paulysid.github.io/mediaStream/index.m3u
 ```
 
 Links to other playlists can be found in the [PLAYLISTS.md](PLAYLISTS.md) file.
@@ -77,4 +77,3 @@ No video files are stored in this repository. The repository simply contains use
 ## License
 
 [![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](LICENSE)
-
