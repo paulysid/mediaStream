@@ -91,12 +91,9 @@ INTERNATIONAL_ENGLISH_MARKERS = (
 
 
 def keep_entry(entry: list[str], source_name: str) -> bool:
-    text = " ".join(entry).lower()
+    text = entry[0].lower()
     has_language_marker = any(marker in text for marker in LANGUAGE_MARKERS)
-    has_religious_marker = any(
-        re.search(rf"(?<![a-z0-9]){re.escape(marker)}(?![a-z0-9])", text)
-        for marker in RELIGIOUS_MARKERS
-    )
+    has_religious_marker = any(marker in text for marker in RELIGIOUS_MARKERS)
     is_nsfw = any(
         re.search(rf"(?<![a-z0-9]){re.escape(marker)}(?![a-z0-9])", text)
         for marker in NSFW_MARKERS
