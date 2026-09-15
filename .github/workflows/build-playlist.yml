@@ -18,15 +18,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - name: Build index playlist
-        shell: bash
-        run: |
-          {
-            echo '#EXTM3U'
-            find streams -type f -name '*.m3u' -print0 \
-              | sort -z \
-              | xargs -0 awk 'FNR > 1'
-          } > index.m3u
+      - name: Build English playlist
+        run: python scripts/build_playlist.py
 
       - name: Commit playlist
         run: |

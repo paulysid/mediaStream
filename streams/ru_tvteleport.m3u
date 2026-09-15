@@ -179,8 +179,6 @@ http://31.148.48.15/Russkiy_illusion/index.m3u8
 http://31.148.48.15/Russkiy_Roman_HD/index.m3u8
 #EXTINF:-1 tvg-id="Russkiyroman.ru@SD",Русский Роман (576p)
 http://31.148.48.15/Russkiy_Roman/index.m3u8
-#EXTINF:-1 tvg-id="RussianExtreme.ru@SD",Русский Экстрим (576p)
-http://31.148.48.15/Russkiy_Ekstrim/index.m3u8
 #EXTINF:-1 tvg-id="Ryzhiy.ru@SD",Рыжий (576p)
 http://31.148.48.15/Rizhiy/index.m3u8
 #EXTINF:-1 tvg-id="SanktPeterburg.ru@SD",Санкт-Петербург (576p)

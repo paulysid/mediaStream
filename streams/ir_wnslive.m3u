@@ -19,8 +19,6 @@ https://me2hls.wns.live/hls/stream.m3u8
 https://atrihls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="AVASeries.ir@SD",AVA Series
 https://avaserieshls.wns.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="BravoFarsiTV.ir@SD",Bravo Farsi TV (360p)
-https://bravoohls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="CafeFilm.ir@SD",Cafe Film
 https://cafefhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="CafeTradeTV.ir@SD",Cafe Trade TV
@@ -77,12 +75,6 @@ https://newfhls.wns.live/hls/stream.m3u8
 https://oitnhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="ParsTV.us@SD",Pars TV
 https://parshls.wns.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="PersianaCinema.fr@SD",Persiana Cinema
-https://todayhls.wns.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="PersianaMedical.fr@SD",Persiana Medical
-https://tfnhls.wns.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="PersianaTravel.fr@SD",Persiana Travel
-https://mardomhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="PMC.ae@SD",PMC
 https://pmchls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="PMCRoyale.ae@SD",PMC Royale (1080p)
@@ -103,7 +95,5 @@ https://t2hls.wns.live/hls/stream.m3u8
 https://maxtvhls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="TVITN.ir@SD",TV ITN
 https://itnhls.wns.live/hls/stream.m3u8
-#EXTINF:-1 tvg-id="VoATVPersian.us@SD",VOA Persian
-https://voaphls.wns.live/hls/stream.m3u8
 #EXTINF:-1 tvg-id="ZedTV.ir@HD",Zed TV
 https://zedhls.wns.live/hls/stream.m3u8

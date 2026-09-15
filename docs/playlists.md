@@ -11,4 +11,5 @@ https://example.com/playlist.m3u8
 Files should use the `.m3u` extension, begin with `#EXTM3U`, and contain one stream URL after
 each `#EXTINF` entry. Keep the existing metadata when editing an entry.
 
-The `Build playlist` workflow combines these files into the root `index.m3u`.
+The `Build playlist` workflow combines these files into the root `index.m3u`, excluding entries
+with clear non-English language markers. Explicitly marked NSFW entries are retained.

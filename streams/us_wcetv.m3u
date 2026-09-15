@@ -5,10 +5,6 @@ https://h5cul1yar48um3t.wcetv.com/hls/cctv4.m3u8
 https://h5cul1yar48um3t.wcetv.com/hls/cgtnd.m3u8
 #EXTINF:-1 tvg-id="CGTN.cn@SD",CGTN English
 https://h5cul1yar48um3t.wcetv.com/hls/cgtn.m3u8
-#EXTINF:-1 tvg-id="CGTNFrench.cn@SD",CGTN French
-https://h5cul1yar48um3t.wcetv.com/hls/cgtnf.m3u8
-#EXTINF:-1 tvg-id="CGTNSpanish.cn@SD",CGTN Spanish
-https://h5cul1yar48um3t.wcetv.com/hls/cgtne.m3u8
 #EXTINF:-1 tvg-id="GuangdongSatelliteTV.cn@SD",Guangdong Satellite TV
 https://h5cul1yar48um3t.wcetv.com/hls/gdsatellite.m3u8
 #EXTINF:-1 tvg-id="GuangdongTVAmerica.us@SD",Guangdong TV America
