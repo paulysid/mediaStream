@@ -38,11 +38,11 @@ Links to other playlists can be found in the [PLAYLISTS.md](PLAYLISTS.md) file.
 
 ## Database
 
-All channel data is taken from the [iptv-org/database](https://github.com/iptv-org/database) repository. If you find any errors please open a new [issue](https://github.com/iptv-org/database/issues) there.
+All channel data is taken from the [iptv-org/database](https://github.com/paulysid/database) repository. If you find any errors please open a new [issue](https://github.com/paulysid/database/issues) there.
 
 ## API
 
-The API documentation can be found in the [iptv-org/api](https://github.com/iptv-org/api) repository.
+The API documentation can be found in the [iptv-org/api](https://github.com/paulysid/api) repository.
 
 ## Resources
 

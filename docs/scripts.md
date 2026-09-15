@@ -66,7 +66,7 @@ npm run act:validate_label -- -e .github/mocks/events/issue_approved.json --acto
 
 ## api:load
 
-Downloads the latest channel and stream data from the [iptv-org/api](https://github.com/iptv-org/api) repository.
+Downloads the latest channel and stream data from the [iptv-org/api](https://github.com/paulysid/api) repository.
 
 ```sh
 npm run api:load
@@ -179,7 +179,7 @@ npm run playlist:edit path/to/playlist.m3u
 
 ## playlist:export
 
-Creates a JSON file with all streams for the [iptv-org/api](https://github.com/iptv-org/api) repository.
+Creates a JSON file with all streams for the [iptv-org/api](https://github.com/paulysid/api) repository.
 
 ```sh
 npm run playlist:export

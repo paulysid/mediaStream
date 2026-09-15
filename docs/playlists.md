@@ -36,7 +36,7 @@ Unlike internal playlists, these playlists are created specifically for regular 
 
 They are generated automatically using the [playlist:generate](./scripts.md#playlistgenerate) script every day at 00:00 UTC and then placed in a separate branch of [gh-pages](https://github.com/iptv-org/iptv/tree/gh-pages).
 
-The links in these playlists are organized solely based on the channel's description in our [database](https://github.com/iptv-org/database). For example, if a channel's broadcast area is listed as `c/IT`, the link to its stream will automatically be placed in the `countries/it.m3u` file.
+The links in these playlists are organized solely based on the channel's description in our [database](https://github.com/paulysid/database). For example, if a channel's broadcast area is listed as `c/IT`, the link to its stream will automatically be placed in the `countries/it.m3u` file.
 
 Another difference from internal playlists is that public playlists include only the best available option for each channel, based on stream quality and labels. The exception is playlists in the `raw/` folder.
 

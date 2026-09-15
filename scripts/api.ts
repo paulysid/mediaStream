@@ -1,5 +1,7 @@
 import { Collection, Dictionary } from '@freearhey/core'
-import { DATA_DIR } from './constants'
+import axios from 'axios'
+import fs from 'fs-extra'
+import { API_URL, DATA_DIR } from './constants'
 import cliProgress from 'cli-progress'
 import * as sdk from '@iptv-org/sdk'
 
@@ -124,12 +126,15 @@ async function downloadData() {
   for (const basename of files) {
     const filename = `${basename}.json`
     const progressBar = multiBar.create(0, 0, { filename })
-    const request = dataManager.downloadFileToDisk(basename, {
-      onDownloadProgress({ total, loaded, rate }) {
-        if (total) progressBar.setTotal(total)
-        progressBar.update(loaded, { speed: rate })
-      }
-    })
+    const request = axios
+      .get(`${API_URL}/${filename}`, {
+        responseType: 'arraybuffer',
+        onDownloadProgress({ total, loaded, rate }) {
+          if (total) progressBar.setTotal(total)
+          progressBar.update(loaded, { speed: rate })
+        }
+      })
+      .then(response => fs.outputFile(`${DATA_DIR}/${filename}`, response.data))
 
     requests.push(request)
   }

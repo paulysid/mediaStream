@@ -29,4 +29,4 @@ It usually indicates the broadcast quality, time shift, source, or broadcast reg
 
 A complete list of all channel and feed IDs can always be found on [iptv-org.github.io](https://iptv-org.github.io/).
 
-If a particular channel is not on the list, you can always add it using this [form](https://github.com/iptv-org/database/issues/new?template=01_channels_add.yml). Similarly, you can use this [form](https://github.com/iptv-org/database/issues/new?template=04_feeds_add.yml) to add a missing feed.
+If a particular channel is not on the list, you can always add it using this [form](https://github.com/paulysid/database/issues/new?template=01_channels_add.yml). Similarly, you can use this [form](https://github.com/paulysid/database/issues/new?template=04_feeds_add.yml) to add a missing feed.
